@@ -7,7 +7,7 @@ const ConnectToMongoose = (app) => {
     mongoose.connect(process.env.MONGO_URI)
         .then((result) => {
             console.log('Connected!!')
-            app.listen(3000); // launching app after connected to db
+            app.listen(process.env.PORT||3000); // launching app after connected to db
             // listening on port 3000
         })
         .catch((err) => {
