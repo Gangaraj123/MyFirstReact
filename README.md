@@ -1,1 +1,1 @@
-"# MyFirstReact" 
+Completely got adjusted to GitHub
