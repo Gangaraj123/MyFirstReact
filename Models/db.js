@@ -1,10 +1,9 @@
 // interacting with database-mongodbAtlas
 const mongoose = require('mongoose')
 const path = require('path')
-require('dotenv').config({ path: path.join(__dirname, '../.env') });
-
+ 
 const ConnectToMongoose = (app) => {
-    mongoose.connect(process.env.MONGO_URI)
+    mongoose.connect('mongodb+srv://202001107:Bopparam123@cluster0.i2yhz.mongodb.net/MyDataBase?retryWrites=true&w=majority')
         .then((result) => {
             console.log('Connected!!')
             app.listen(process.env.PORT||3000); // launching app after connected to db
