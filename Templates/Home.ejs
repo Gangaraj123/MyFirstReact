@@ -1,0 +1,66 @@
+<!-- Home page where all blogs are displayed -->
+<div class="container my-4">
+    <div class="row ">
+        <% if(locals.curr_blogs && curr_blogs.length>0){%>
+            <h1 class="mx-5" style=" color: rgb(255, 255, 255);font-weight: 700;">
+                All
+                Blogs</h1>
+            <% curr_blogs.forEach(blog=> { %>
+                <div class="container col-md-5 my-4 mx-4 ">
+                    <div class="card" >
+                    <div class="cards container">
+                        <div class="card_image loading"></div>
+                        <div class="content">
+                            <div class="card_title loading"> </div>
+                            <div class="card_tag loading"></div>
+                            <div class="card_description loading"></div>
+                        </div>
+                      </div>
+            
+                        <div class="card-body" style="display: none;">
+                            <div style="float: left;" class="mx-2">
+                                <img style="width: 200px;height:180px;border-radius:5px;"
+                                    src="data:image/<%=blog.img.contentType%>;base64,
+                        <%=blog.img.data.toString('base64')%>">
+                            </div>
+                            <h5 class="card-title">
+                                <%=blog.Title %>
+                            </h5>
+                            <p class="card-text">
+                                <%=blog.Body.slice(0,100)+"...." %>
+                            </p>
+                            <p>
+                                <strong>category:</strong>
+                                <%= blog.category%>
+                                    <a href="/blog/view/<%=blog._id%>"
+                                        class="btn-sm btn-success float-end">View
+                                        Blog</a>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <% }) }else {%>
+                    <div class="container m-4">
+                        <h4>
+                            There are No blogs to show.
+                        </h4>
+                        <p>Creat a blog here.</p>
+                        <a href="/blog/create" class="btn btn-primary">
+                            create a new blog
+                        </a>
+                    </div>
+                    <% } %>
+
+    </div>
+</div>
+<script>
+  setTimeout(() => {
+    var all = document.getElementsByClassName('card-body');
+    var all2=document.getElementsByClassName('cards')
+     for (var i = 0; i < all.length; i++) {  
+         all2[i].style.display="none"
+         all[i].style.display="block"
+     }
+  }, 1000);
+</script>
