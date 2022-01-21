@@ -3,7 +3,6 @@ const express = require('express'); // importing express
 const fileUpload = require('express-fileupload');
 const path = require('path')
 const Blog = require('./Models/Blog');
-require('dotenv').config({ path: path.join(__dirname, '/.env') });
 const ConnectToMongoose = require('./Models/db');
 const app = express(); // creating an instance of express
 
