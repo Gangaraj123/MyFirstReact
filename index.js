@@ -32,10 +32,19 @@ app.use('/auth', require("./Routes/AuthRoutes"));
 
 //Home page
 app.get('/', (req, res) => {
-    // Blog.find() // getting all blogs and sendig it to basic page
-    //     .then(result => {
-        //     })
-     res.render('../Templates/basic', { page: "Home", Curr_blogs: [] })
+    
+    try {
+        Blog.find() // getting all blogs and sendig it to basic page
+        .then(result => {
+            console.log(result);
+            // res.render('../Templates/basic', { page: "Home", Curr_blogs: result })
+        })
+        
+    } catch (error) {
+       console.log('some error occured');
+    }
+    res.render('../Templates/NotFound')
+        
 })
 
 // Notfound page for other urls

@@ -3,7 +3,7 @@ const User = require('../Models/User');
 const brcypt = require('bcrypt') // for encryption
 const router = expres.Router();
 const jwt = require('jsonwebtoken')
-const secret = process.env.JWT_SECRET;
+const secret = "GangarajBopparam";
 
 // get request for signup where singup page is rendered
 router.get('/signup', (req, res) => {
