@@ -1,0 +1,30 @@
+.top-heading {
+  color: grey;
+  font-style: bold;
+}
+
+.Icon,
+.IconGrab {
+  color: gray;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Icon:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.IconGrab:hover {
+  color: black;
+  cursor: grab;
+}
+
+.seperator {
+  width: 45px;
+  height: 46px;
+   background-color: #ced0d1;
+  
+}
