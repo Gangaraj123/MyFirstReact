@@ -6,9 +6,7 @@ import './App.css';
 import Header from './components/Header';
 import Item from './components/Item';
 import {
-  SortableContainer,
-  SortableElement,
-  SortableHandle
+  SortableContainer
 } from "react-sortable-hoc";
 
 

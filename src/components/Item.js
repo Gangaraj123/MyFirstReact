@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Tooltip from 'react-bootstrap/Tooltip';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import {
-    SortableContainer,
+    
     SortableElement,
     SortableHandle
 } from "react-sortable-hoc";
