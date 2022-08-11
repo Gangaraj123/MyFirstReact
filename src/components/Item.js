@@ -94,9 +94,11 @@ export default class Item extends Component {
             this.props.setFunc(this.props.index, this.props.value.level + 1)
         }
     }
+
     deleteElement = () => {
         this.props.delFunc(this.props.index)
     }
+    
     decrease = () => {
         if (this.props.value.level > 1) {
             this.props.setFunc(this.props.index, this.props.value.level - 1)
