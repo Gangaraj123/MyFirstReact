@@ -1705,6 +1705,7 @@
 .contact-info {
   margin-inline: 1.3rem;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 #yt_video {
@@ -1741,6 +1742,10 @@
   }
   #yt_frame{
     width: 80%;
+  }
+  #contact_names
+  {
+    flex-direction: column;
   }
 }
 
